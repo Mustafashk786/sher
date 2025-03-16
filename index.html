@@ -119,5 +119,21 @@ a:hover {
         <li><a href="heartbreak.html">😢 Heart Break Collection</a> <span class="heart">❤</span></li>
         <li><a href="Poem.html">📜 Poem Collection</a> <span class="heart">❤️</span></li>
     </ol>
+    <!--java script hai idhar-->
+    <script>document.addEventListener("DOMContentLoaded", function () {
+    let rainContainer = document.createElement("div");
+    document.body.appendChild(rainContainer);
+
+    for (let i = 0; i < 20; i++) {  // 20 raindrops for a simple effect
+        let drop = document.createElement("div");
+        drop.classList.add("raindrop");
+
+        drop.style.left = Math.random() * 100 + "vw"; 
+        drop.style.animationDuration = "2s";  
+
+        rainContainer.appendChild(drop);
+    }
+});</script>
 </body>
+    
 </html>
