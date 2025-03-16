@@ -120,8 +120,8 @@ a:hover {
         <li><a href="heartbreak.html">😢 Heart Break Collection</a> <span class="heart">❤</span></li>
         <li><a href="Poem.html">📜 Poem Collection</a> <span class="heart">❤️</span></li>
     </ol>
-    <!--java script hai idhar-->
-    <script>document.addEventListener("DOMContentLoaded", function () {
+    // java script hai idhar
+document.addEventListener("DOMContentLoaded", function () {
     let rainContainer = document.createElement("div");
     document.body.appendChild(rainContainer);
 
@@ -130,7 +130,7 @@ a:hover {
         drop.classList.add("raindrop");
 
         drop.style.left = Math.random() * 100 + "vw"; 
-        drop.style.animationDuration = "2s";  
+        drop.style.animationDuration = Math.random() * 2 + 1 + "s"; // Random speed for a natural look
 
         rainContainer.appendChild(drop);
     }
