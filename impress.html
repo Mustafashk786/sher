@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Shayari 💖</title>
+    <style>
+        /* Beautiful Romantic Background */
+        body {
+            background: url('https://raw.githubusercontent.com/Mustafashk786/sher/refs/heads/main/imp.jpeg') no-repeat center center/cover;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Animated Heading with Typing Effect */
+        h2 {
+            font-size: 40px;
+            color: #ff4d79;
+            text-shadow: 2px 2px 8px black;
+            font-weight: bold;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Shayari Box */
+        .shayari {
+            margin: 20px auto;
+            padding: 15px;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            font-size: 18px;
+            box-shadow: 0px 0px 10px rgba(255, 0, 102, 0.6);
+            transition: transform 0.3s ease-in-out, background 0.3s;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        .shayari:hover {
+            transform: scale(1.05);
+            background: rgba(255, 51, 102, 0.8);
+        }
+
+        /* Back Button */
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-shadow: 1px 1px 3px black;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #e62e5b;
+            transform: scale(1.1);
+        }
+
+        /* Typing Effect */
+        .typing {
+            display: inline-block;
+            border-right: 2px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(40, end) forwards, blink 0.7s infinite;
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: absolute;
+            bottom: 0;
+            font-size: 20px;
+            color: #ff3366;
+            animation: floatHeart 5s infinite ease-in-out;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        @keyframes floatHeart {
+            0% { opacity: 0; transform: translateY(0) scale(0.5); }
+            50% { opacity: 1; transform: translateY(-100px) scale(1); }
+            100% { opacity: 0; transform: translateY(-300px) scale(1.5); }
+        }
+    </style>
+</head>
+<body>
+
+    <h2><span class="typing">Impress Your Love 💕</span></h2>
+
+    <!-- Empty Shayari Boxes -->
+    <div class="shayari"><p><i>1. Teri chaahat mein aisi shifa si hai,<br>
+        Jo zakhm bhi de, par dawa si hai.<br>
+        Tera saath ho toh har raat chandni,<br>
+        Tere bina zindagi bas saza si hai.</i> </p></div>
+    <div class="shayari"><p><i>2. Teri zulfon ki chhaya mein jeena hai mujhe,<br>
+        Teri aankhon ke jaam se peena hai mujhe.<br>
+        Mohabbat ka izhaar lafzon se kyun karun,<br>
+        Bas teri baahon mein khona hai mujhe.</i></p></div>
+    <div class="shayari"></div>
+    <div class="shayari"></div>
+    <div class="shayari"></div>
+    <div class="shayari"></div>
+    <div class="shayari"></div>
+    <div class="shayari"></div>
+    <div class="shayari"></div>
+    <div class="shayari"></div>
+
+    <button class="back-button" onclick="goBack()">🔙 Back</button>
+
+    <!-- JavaScript for Back Button & Floating Hearts -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Create Floating Hearts
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+
+</body>
+</html>
