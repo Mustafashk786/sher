@@ -107,12 +107,13 @@
             50% { opacity: 1; transform: translateY(-100px) scale(1); }
             100% { opacity: 0; transform: translateY(-300px) scale(1.5); }
         }
+ // Rain Sound on Click
         document.addEventListener("click", function () {
-    let rainAudio = document.getElementById("rainSound");
-    if (rainAudio && rainAudio.paused) {
-        rainAudio.play();
-    }
-});
+            let rainAudio = document.getElementById("rainSound");
+            if (rainAudio.paused) {
+                rainAudio.play();
+            }
+        });
     </style>
 </head>
 <body>
