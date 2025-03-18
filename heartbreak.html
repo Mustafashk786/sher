@@ -26,12 +26,13 @@
             border-radius: 10px;
             font-size: 18px;
         }
+  // Rain Sound on Click
         document.addEventListener("click", function () {
-    let rainAudio = document.getElementById("rainSound");
-    if (rainAudio && rainAudio.paused) {
-        rainAudio.play();
-    }
-});
+            let rainAudio = document.getElementById("rainSound");
+            if (rainAudio.paused) {
+                rainAudio.play();
+            }
+        });
     </style>
 </head>
 <body>
