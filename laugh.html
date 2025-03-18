@@ -45,12 +45,13 @@
         .back-button:hover {
             background-color: #e6b800;
         }
+   // Rain Sound on Click
         document.addEventListener("click", function () {
-    let rainAudio = document.getElementById("rainSound");
-    if (rainAudio && rainAudio.paused) {
-        rainAudio.play();
-    }
-});
+            let rainAudio = document.getElementById("rainSound");
+            if (rainAudio.paused) {
+                rainAudio.play();
+            }
+        });
     </style>
 </head>
 <body>
