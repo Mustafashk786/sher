@@ -29,6 +29,13 @@
             text-decoration: none;
             font-weight: bold;
         }
+         // Rain Sound on Click
+        document.addEventListener("click", function () {
+            let rainAudio = document.getElementById("rainSound");
+            if (rainAudio.paused) {
+                rainAudio.play();
+            }
+        });
     </style>
 </head>
 <body>
